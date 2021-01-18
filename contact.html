@@ -27,3 +27,47 @@
     </form>
   </body>
 </html>
+
+
+<!----------->
+
+ h1 { 
+    color:green; 
+} 
+.xyz { 
+    background-size: auto; 
+    text-align: center; 
+    padding-top: 100px; 
+} 
+.btn-circle.btn-sm { 
+    width: 30px; 
+    height: 30px; 
+    padding: 6px 0px; 
+    border-radius: 15px; 
+    font-size: 8px; 
+    text-align: center; 
+} 
+.btn-circle.btn-md { 
+    width: 50px; 
+    height: 50px; 
+    padding: 7px 10px; 
+    border-radius: 25px; 
+    font-size: 10px; 
+    text-align: center; 
+} 
+.btn-circle.btn-xl { 
+    width: 70px; 
+    height: 70px; 
+    padding: 10px 16px; 
+    border-radius: 35px; 
+    font-size: 12px; 
+    text-align: center; 
+} 
+
+
+
+
+<div *ngFor="let question of quiz.questions; let index = index;">
+      <!-- <div (click)="goTo(index)" class="p-3 round mb-2 {{ isAnswered(question) == 'Answered'? 'bg-info': 'bg-warning' }}">{{index + 1}}</div> -->
+      <button type="button" (click)="goTo(index)" class="btn btn-circle btn-md m-2 {{ isAnswered(question) == 'Answered'? 'btn-primary' : 'btn-warning' }}">{{index + 1}}</button> 
+    </div> 
